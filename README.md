@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Gestion de Transferencias] <a name="about-project"></a>
+# 📖 Gestion de Transferencias <a name="about-project"></a>
 
 
 **Gestion de Transferencias** es r una API REST para gestionar transferencias de saldo.
@@ -116,37 +116,38 @@ Build the api project
 Open the URL https://localhost:7001/swagger/index.html para ver la documentación y ejecutar las operaciones CRUD
 
 ### Usage 
-![1 Modelo de datos](https://github.com/user-attachments/assets/c2ed4dfb-0ee2-496d-810c-ed393f72cb46)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c2ed4dfb-0ee2-496d-810c-ed393f72cb46" alt="1 Modelo de datos">
+</p>
 <p align="center">1. Modelo de dato</p>
 ![2 Gestion de Transferencias API](https://github.com/user-attachments/assets/f686e9ab-6d5c-44d5-a3b6-a9370e54e58d)
 
-2. API Gestión de Transferencias
+<p align="center">2. API Gestión de Transferencias</p>
+
 ![3 POST Crear Billetera](https://github.com/user-attachments/assets/c71d6a97-b1f4-4b99-8e1c-58e6dd7ca380)
+<p align="center">3. POST Crear Billetera</p>
 
-3. POST Crear Billetera
 ![4 GET Obtener todas las billeteras](https://github.com/user-attachments/assets/44fbe616-d39f-4234-9301-0696d6e809dd)
+<p align="center">4. GET Obtener todas las Billeteras</p>
 
-4. GET Obtener todas las Billeteras
 ![5 Get Obtener todos los movimientos](https://github.com/user-attachments/assets/775efebf-3125-408f-a3f6-fe4fe9c2da6e)
+<p align="center">5. GET Obtener todos los movimientos</p>
 
-5. GET Obtener todos los movimientos
 ![6 POST Crear transaccion validaciones](https://github.com/user-attachments/assets/840c33b1-c710-419a-b661-fc948177a259)
+<p align="center">6. POST Crear Transacción Validaciones</p>
 
-6. POST Crear Transacción Validaciones
 ![7 POST Crear transaccion resultado](https://github.com/user-attachments/assets/3b45b89d-d9eb-4da6-bfce-fd3247d052ae)
+<p align="center">7. POST Crear Transacción Resultado</p>
 
-7. POST Crear Transacción Resultado
 ![8 Persistencia en BD ](https://github.com/user-attachments/assets/3ebb41a3-9fc2-43af-adc8-30b36c0b47dd)
+<p align="center">8. Persistencia en BD</p>
 
-8. Persistencia en BD
 ![9 GET Obtener Billetera vsalidaciones](https://github.com/user-attachments/assets/491dae7a-3438-4af9-be37-03b404680783)
-
-9. Obtener Billetera Validaciones
+<p align="center">9. Obtener Billetera Validaciones</p>
 
 ![10 Estructura Solución Gestión Transferencias](https://github.com/user-attachments/assets/d06f601d-d7a2-48ce-9e22-f25fc8d92b19)
+<p align="center">10. Estructura Solución Gestión Transferencias</p>
 
-10. Estructura Solución Gestión Transferencias
 
 ### Run tests
 
