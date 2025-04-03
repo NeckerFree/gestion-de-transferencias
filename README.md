@@ -120,32 +120,50 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
   <img src="https://github.com/user-attachments/assets/c2ed4dfb-0ee2-496d-810c-ed393f72cb46" alt="1 Modelo de datos">
 </p>
 <p align="center">1. Modelo de dato</p>
-![2 Gestion de Transferencias API](https://github.com/user-attachments/assets/f686e9ab-6d5c-44d5-a3b6-a9370e54e58d)
 
+<p align="center">
+  <img src="" alt="https://github.com/user-attachments/assets/f686e9ab-6d5c-44d5-a3b6-a9370e54e58d" alt="2 Gestion de Transferencias API">
+</p>
 <p align="center">2. API Gestión de Transferencias</p>
 
-![3 POST Crear Billetera](https://github.com/user-attachments/assets/c71d6a97-b1f4-4b99-8e1c-58e6dd7ca380)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c71d6a97-b1f4-4b99-8e1c-58e6dd7ca380" alt="3 POST Crear Billetera">
+</p>
 <p align="center">3. POST Crear Billetera</p>
 
-![4 GET Obtener todas las billeteras](https://github.com/user-attachments/assets/44fbe616-d39f-4234-9301-0696d6e809dd)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/44fbe616-d39f-4234-9301-0696d6e809dd)" alt="4 GET Obtener todas las billeteras">
+</p>
 <p align="center">4. GET Obtener todas las Billeteras</p>
 
-![5 Get Obtener todos los movimientos](https://github.com/user-attachments/assets/775efebf-3125-408f-a3f6-fe4fe9c2da6e)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/775efebf-3125-408f-a3f6-fe4fe9c2da6e" alt="5 Get Obtener todos los movimientos">
+</p>
 <p align="center">5. GET Obtener todos los movimientos</p>
 
-![6 POST Crear transaccion validaciones](https://github.com/user-attachments/assets/840c33b1-c710-419a-b661-fc948177a259)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/840c33b1-c710-419a-b661-fc948177a259" alt="6 POST Crear transaccion validaciones">
+</p>
 <p align="center">6. POST Crear Transacción Validaciones</p>
 
-![7 POST Crear transaccion resultado](https://github.com/user-attachments/assets/3b45b89d-d9eb-4da6-bfce-fd3247d052ae)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3b45b89d-d9eb-4da6-bfce-fd3247d052ae" alt="7 POST Crear Transacción Resultado">
+</p>
 <p align="center">7. POST Crear Transacción Resultado</p>
 
-![8 Persistencia en BD ](https://github.com/user-attachments/assets/3ebb41a3-9fc2-43af-adc8-30b36c0b47dd)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3ebb41a3-9fc2-43af-adc8-30b36c0b47dd" alt="8 Persistencia en BD ">
+</p>
 <p align="center">8. Persistencia en BD</p>
 
-![9 GET Obtener Billetera vsalidaciones](https://github.com/user-attachments/assets/491dae7a-3438-4af9-be37-03b404680783)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/491dae7a-3438-4af9-be37-03b404680783" alt="9 GET Obtener Billetera validaciones">
+</p>
 <p align="center">9. Obtener Billetera Validaciones</p>
 
-![10 Estructura Solución Gestión Transferencias](https://github.com/user-attachments/assets/d06f601d-d7a2-48ce-9e22-f25fc8d92b19)
+<p align="center">
+  <img src="(https://github.com/user-attachments/assets/d06f601d-d7a2-48ce-9e22-f25fc8d92b19" alt="10 Estructura Solución Gestión Transferencias">
+</p>
 <p align="center">10. Estructura Solución Gestión Transferencias</p>
 
 
