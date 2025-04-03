@@ -130,9 +130,10 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
   <img src="https://github.com/user-attachments/assets/c71d6a97-b1f4-4b99-8e1c-58e6dd7ca380" alt="3 POST Crear Billetera">
 </p>
 <p align="center">3. POST Crear Billetera</p>
+![4 GET Obtener todas las billeteras]()
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/44fbe616-d39f-4234-9301-0696d6e809dd)" alt="4 GET Obtener todas las billeteras">
+  <img src="https://github.com/user-attachments/assets/44fbe616-d39f-4234-9301-0696d6e809dd" alt="4 GET Obtener todas las billeteras">
 </p>
 <p align="center">4. GET Obtener todas las Billeteras</p>
 
@@ -162,7 +163,7 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 <p align="center">9. Obtener Billetera Validaciones</p>
 
 <p align="center">
-  <img src="(https://github.com/user-attachments/assets/d06f601d-d7a2-48ce-9e22-f25fc8d92b19" alt="10 Estructura Solución Gestión Transferencias">
+  <img src="https://github.com/user-attachments/assets/d06f601d-d7a2-48ce-9e22-f25fc8d92b19" alt="10 Estructura Solución Gestión Transferencias">
 </p>
 <p align="center">10. Estructura Solución Gestión Transferencias</p>
 
