@@ -42,9 +42,6 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-
-
-<details>
 <details>
   <summary>Backend</summary>
   <ul>
@@ -63,12 +60,12 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Clean Architecture]**
-- **[MediatR]**
-- **[Code First]**
-- **[FluentValidation]**
-- **[Automapper]**
-- **[Framework net9.0]**
+- **Clean Architecture**
+- **MediatR**
+- **Code First**
+- **FluentValidation**
+- **Automapper**
+- **Framework net9.0**
 - 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,7 +118,7 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 ### Usage 
 ![1 Modelo de datos](https://github.com/user-attachments/assets/c2ed4dfb-0ee2-496d-810c-ed393f72cb46)
 
-1. Modelo de datos
+<p align="center">1. Modelo de dato</p>
 ![2 Gestion de Transferencias API](https://github.com/user-attachments/assets/f686e9ab-6d5c-44d5-a3b6-a9370e54e58d)
 
 2. API Gestión de Transferencias
@@ -146,6 +143,7 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 ![9 GET Obtener Billetera vsalidaciones](https://github.com/user-attachments/assets/491dae7a-3438-4af9-be37-03b404680783)
 
 9. Obtener Billetera Validaciones
+
 ![10 Estructura Solución Gestión Transferencias](https://github.com/user-attachments/assets/d06f601d-d7a2-48ce-9e22-f25fc8d92b19)
 
 10. Estructura Solución Gestión Transferencias
@@ -161,9 +159,7 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
-👤 **Author1**
+👤 **Elio Cortés**
 
 - GitHub: [@NeckerFree](https://github.com/NeckerFree)
 
@@ -174,11 +170,9 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Patrón Unit of Work**
+- [ ] **Completar Pruebas Unitarias y de Integración**
+- [ ] **Usar Redis**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,8 +190,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -206,7 +198,6 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank...
 
