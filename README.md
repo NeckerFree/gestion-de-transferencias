@@ -55,7 +55,12 @@
     <li><a href="https://www.sqlite.org/">SqlLite</a></li>
   </ul>
 </details>
-
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.netmentor.es/entrada/tutorial-mediatr-dotnet">MediaTr</a></li>
+  </ul>
+</details>
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -66,7 +71,7 @@
 - **FluentValidation**
 - **Automapper**
 - **Framework net9.0**
-- 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -74,7 +79,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,46 +126,54 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 </p>
 <p align="center">1. Modelo de dato</p>
 
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f686e9ab-6d5c-44d5-a3b6-a9370e54e58d" alt="2 Gestion de Transferencias API">
 </p>
 <p align="center">2. API Gestión de Transferencias</p>
 
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c71d6a97-b1f4-4b99-8e1c-58e6dd7ca380" alt="3 POST Crear Billetera">
 </p>
 <p align="center">3. POST Crear Billetera</p>
-![4 GET Obtener todas las billeteras]()
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/44fbe616-d39f-4234-9301-0696d6e809dd" alt="4 GET Obtener todas las billeteras">
 </p>
 <p align="center">4. GET Obtener todas las Billeteras</p>
 
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/775efebf-3125-408f-a3f6-fe4fe9c2da6e" alt="5 Get Obtener todos los movimientos">
 </p>
 <p align="center">5. GET Obtener todos los movimientos</p>
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/840c33b1-c710-419a-b661-fc948177a259" alt="6 POST Crear transaccion validaciones">
 </p>
 <p align="center">6. POST Crear Transacción Validaciones</p>
 
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3b45b89d-d9eb-4da6-bfce-fd3247d052ae" alt="7 POST Crear Transacción Resultado">
 </p>
 <p align="center">7. POST Crear Transacción Resultado</p>
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3ebb41a3-9fc2-43af-adc8-30b36c0b47dd" alt="8 Persistencia en BD ">
 </p>
 <p align="center">8. Persistencia en BD</p>
 
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/491dae7a-3438-4af9-be37-03b404680783" alt="9 GET Obtener Billetera validaciones">
 </p>
 <p align="center">9. Obtener Billetera Validaciones</p>
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d06f601d-d7a2-48ce-9e22-f25fc8d92b19" alt="10 Estructura Solución Gestión Transferencias">
@@ -169,7 +182,7 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 
 
 ### Run tests
-
+Se encontraron dificultades en la configuración del proyecto de pruebas de integración por lo cuál queda pendiente la implementación y verificación de pruebas.
 
 ### Deployment
 
@@ -211,7 +224,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+If you like this project please give me a start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,12 +232,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
-I would like to thank...
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
@@ -234,7 +242,9 @@ I would like to thank...
 - Kubernetes maneja el escalado automático de pods en la nube.
 - API Gateway distribuye tráfico entre microservicios.
 - **2. ¿Cómo tu implementación asegura el principio de idempotencia?**
-- Se pueden usar tokens únicos (Idempotency-Key) en cada petición POST/PUT. El backend verifica en Redis si ya procesó esa clave antes de ejecutar la transacción. Para operaciones críticas, la base de datos usa constraints UNIQUE en campos como transaction_id. Si se detecta un request duplicado, se retorna la respuesta cacheada en lugar de reprocesar, asegurando consistencia.
+- Se pueden usar tokens únicos (Idempotency-Key) en cada petición POST/PUT. El backend verifica en Redis si ya procesó esa clave antes de ejecutar la transacción.
+- Para operaciones críticas, la base de datos usa constraints UNIQUE en campos como transaction_id. Si se detecta un request duplicado,
+- se retorna la respuesta cacheada en lugar de reprocesar, asegurando consistencia.
 - **3. ¿Cómo protegerías tus servicios para evitar ataques de Denegación de servicios, sql injection, CSRF?**
 - Rate limiting (límite de peticiones por IP) y Cloudflare.
 - SQL Injection se mitiga con ORMs (EF Core) que parametriza queries.
