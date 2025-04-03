@@ -113,16 +113,16 @@ Build the api project
   dotnet build
   dotnet run 
 ```
-Open the URL https://localhost:7001/swagger/index.html para ver la documentación y ejecutar las operaciones CRUD
 
 ### Usage 
+Open the URL https://localhost:7001/swagger/index.html para ver la documentación y ejecutar las operaciones CRUD
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c2ed4dfb-0ee2-496d-810c-ed393f72cb46" alt="1 Modelo de datos">
 </p>
 <p align="center">1. Modelo de dato</p>
 
 <p align="center">
-  <img src="" alt="https://github.com/user-attachments/assets/f686e9ab-6d5c-44d5-a3b6-a9370e54e58d" alt="2 Gestion de Transferencias API">
+  <img src="https://github.com/user-attachments/assets/f686e9ab-6d5c-44d5-a3b6-a9370e54e58d" alt="2 Gestion de Transferencias API">
 </p>
 <p align="center">2. API Gestión de Transferencias</p>
 
@@ -228,13 +228,22 @@ I would like to thank...
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
 - **[1. ¿Cómo tu implementación puede ser escalable a miles de transacciones?]**
-- La implementación en Clean Architecture escala mediante CQRS para separar consultas de comandos, permitiendo distribuir cargas. Se integra Redis para cachear respuestas frecuentes y RabbitMQ/Kafka para procesar transacciones asíncronamente. Las bases de datos usan sharding (particionamiento por región/usuario) y réplicas de lectura para equilibrar la carga. Kubernetes maneja el escalado automático de pods en la nube, mientras que API Gateway (como YARP) distribuye tráfico entre microservicios.
+- Mediante la implementación del patrón CQRS para separar consultas de comandos, permite distribuir cargas. 
+- Integrando Redis para cachear respuestas frecuentes y RabbitMQ para procesar transacciones asíncronamente.
+- Kubernetes maneja el escalado automático de pods en la nube.
+- API Gateway distribuye tráfico entre microservicios.
 - **[2. ¿Cómo tu implementación asegura el principio de idempotencia?]**
-- Se garantiza generando tokens únicos (Idempotency-Key) en cada petición POST/PUT. El backend verifica en Redis si ya procesó esa clave antes de ejecutar la transacción. Para operaciones críticas, la base de datos usa constraints UNIQUE en campos como transaction_id. Si se detecta un request duplicado, se retorna la respuesta cacheada en lugar de reprocesar, asegurando consistencia.
-- **[3. ¿Cómo protegerías tus servicios para evitar ataques deDenegación de servicios, sql injection, CSRF?]**
-- Para DoS/DDoS se implementa rate limiting (límite de peticiones por IP) y Cloudflare. SQL Injection se mitiga con ORMs (EF Core/Dapper) que parametrizan queries. Los tokens CSRF y políticas CORS estrictas protegen endpoints web, mientras que el encoding de datos (HtmlEncoder) neutraliza XSS. Auditorías continuas con OWASP ZAP validan vulnerabilidades.
+- Se pueden usar tokens únicos (Idempotency-Key) en cada petición POST/PUT. El backend verifica en Redis si ya procesó esa clave antes de ejecutar la transacción. Para operaciones críticas, la base de datos usa constraints UNIQUE en campos como transaction_id. Si se detecta un request duplicado, se retorna la respuesta cacheada en lugar de reprocesar, asegurando consistencia.
+- **[3. ¿Cómo protegerías tus servicios para evitar ataques de Denegación de servicios, sql injection, CSRF?]**
+- Rate limiting (límite de peticiones por IP) y Cloudflare.
+- SQL Injection se mitiga con ORMs (EF Core) que parametriza queries.
+- Los tokens CSRF y políticas CORS estrictas protegen endpoints web
+- El encoding de datos (HtmlEncoder) neutraliza XSS.
+- Auditorías continuas con OWASP ZAP validan vulnerabilidades.
 - **[4. ¿Cuál sería tu estrategia para migrar un monolito amicroservicios?]**
-- Se aplica el Strangler Pattern: primero se extraen servicios acoplables (pagos, notificaciones) como módulos independientes con su propia DB (usando CDC para sincronizar datos iniciales). Un API Gateway enruta tráfico gradualmente del monolito a los nuevos servicios. Eventos asíncronos (Kafka) mantienen consistencia durante la transición, minimizando impacto en usuarios.
+- Extraer servicios acoplables (pagos, notificaciones) como módulos independientes con su propia DB 
+- Un API Gateway enruta tráfico gradualmente del monolito a los nuevos servicios.
+- Eventos asíncronos (RabbitMq) mantienen consistencia durante la transición, minimizando impacto en usuarios.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
