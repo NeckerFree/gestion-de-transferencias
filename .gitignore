@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.vsidx
+*.db
+*.db-shm
+/.vs/GestionTransferenciasApis/CopilotIndices/17.12.38.29086/CodeChunks.db-wal
+/.vs/GestionTransferenciasApis/CopilotIndices/17.12.38.29086/SemanticSymbols.db-wal
+/.vs/GestionTransferenciasApis/CopilotIndices/17.12.38.29086/SemanticSymbols.db-shm
+*.v2
+**/bin/
+**/obj/
+**/v17/
+*.cache
+*.bin
+/.vs/GestionTransferenciasApis/CopilotIndices/17.12.38.29086/SemanticSymbols.db
+/.vs/GestionTransferenciasApis/copilot-chat/1dccd21f/sessions/f4a2ab54-9ede-4e14-b79f-085cdda61738
+/.vs/GestionTransferenciasApis/v17/.suo
+/GestionTransferencias.Persistence/Migrations/
+/.vs/GestionTransferenciasApis/v17/DocumentLayout.backup.json
+/.vs/GestionTransferenciasApis/v17/DocumentLayout.json

@@ -142,31 +142,27 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
+SQlite Database Setup:
+Step 1: create initial migration (Package Manager Console)
 ```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  dotnet ef migrations add InitialCreate --project GestionTransferencias.Persistence
 ```
---->
+Step 2: create the folder defined in AppDbContext for database ('C:/Database/')
 
+Step 3: Execute the command to create and update database (Package Manager Console)
+```sh
+  dotnet ef database update --project GestionTransferencias.Persistence
+```
 ### Install
 
 Install this project with:
-
-<!--
-Example command:
+Build the api project 
 
 ```sh
-  cd my-project
-  gem install
+  dotnet build
+  dotnet run 
 ```
---->
-
-### Usage
-
-To run the project, execute the following command:
+Open the URL https://localhost:7001/swagger/index.html to see endpoints
 
 <!--
 Example command:
