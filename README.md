@@ -36,7 +36,7 @@
 # 📖 Gestion de Transferencias <a name="about-project"></a>
 
 
-**Gestion de Transferencias** es r una API REST para gestionar transferencias de saldo.
+**Gestion de Transferencias** es una API REST para gestionar transferencias de saldo. Se usan validaciones de datos para evitar errores.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -190,6 +190,7 @@ Open the URL https://localhost:7001/swagger/index.html para ver la documentació
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- [ ] **Implementar Autenticación y Autorización**
 - [ ] **Patrón Unit of Work**
 - [ ] **Completar Pruebas Unitarias y de Integración**
 - [ ] **Usar Redis**
@@ -227,24 +228,26 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-- **[1. ¿Cómo tu implementación puede ser escalable a miles de transacciones?]**
+- **1. ¿Cómo tu implementación puede ser escalable a miles de transacciones?**
 - Mediante la implementación del patrón CQRS para separar consultas de comandos, permite distribuir cargas. 
 - Integrando Redis para cachear respuestas frecuentes y RabbitMQ para procesar transacciones asíncronamente.
 - Kubernetes maneja el escalado automático de pods en la nube.
 - API Gateway distribuye tráfico entre microservicios.
-- **[2. ¿Cómo tu implementación asegura el principio de idempotencia?]**
+- **2. ¿Cómo tu implementación asegura el principio de idempotencia?**
 - Se pueden usar tokens únicos (Idempotency-Key) en cada petición POST/PUT. El backend verifica en Redis si ya procesó esa clave antes de ejecutar la transacción. Para operaciones críticas, la base de datos usa constraints UNIQUE en campos como transaction_id. Si se detecta un request duplicado, se retorna la respuesta cacheada en lugar de reprocesar, asegurando consistencia.
-- **[3. ¿Cómo protegerías tus servicios para evitar ataques de Denegación de servicios, sql injection, CSRF?]**
+- **3. ¿Cómo protegerías tus servicios para evitar ataques de Denegación de servicios, sql injection, CSRF?**
 - Rate limiting (límite de peticiones por IP) y Cloudflare.
 - SQL Injection se mitiga con ORMs (EF Core) que parametriza queries.
 - Los tokens CSRF y políticas CORS estrictas protegen endpoints web
 - El encoding de datos (HtmlEncoder) neutraliza XSS.
 - Auditorías continuas con OWASP ZAP validan vulnerabilidades.
-- **[4. ¿Cuál sería tu estrategia para migrar un monolito amicroservicios?]**
+- **4. ¿Cuál sería tu estrategia para migrar un monolito amicroservicios?**
 - Extraer servicios acoplables (pagos, notificaciones) como módulos independientes con su propia DB 
 - Un API Gateway enruta tráfico gradualmente del monolito a los nuevos servicios.
 - Eventos asíncronos (RabbitMq) mantienen consistencia durante la transición, minimizando impacto en usuarios.
-
+- **¿Qué alternativas a la solución requerida propondrías para una solución escalable?**
+- Para alta escalabilidad: Se podría migrar a Arquitectura Event-Driven o Microservicios.
+- Se podría usar Serverless es económico para cargas variables.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
