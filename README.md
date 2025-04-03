@@ -56,9 +56,9 @@
   </ul>
 </details>
 <details>
-<summary>Database</summary>
+<summary>Patrón mediador</summary>
   <ul>
-    <li><a href="https://www.netmentor.es/entrada/tutorial-mediatr-dotnet">MediaTr</a></li>
+    <li><a href="https://www.netmentor.es/entrada/tutorial-mediatr-dotnet">MediatR</a></li>
   </ul>
 </details>
 <!-- Features -->
@@ -77,9 +77,6 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-
-- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
