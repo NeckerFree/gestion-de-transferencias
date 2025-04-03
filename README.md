@@ -1,36 +1,6 @@
 <a name="readme-top"></a>
 
-<!--
-!!! IMPORTANT !!!
-This README is an example of how you could professionally present your codebase. 
-Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
-
-You should modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
-
-For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
--->
-
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -63,36 +33,29 @@ For more information on the importance of a professional README for your reposit
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Gestion de Transferencias] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**Gestion de Transferencias** es r una API REST para gestionar transferencias de saldo.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
 <details>
-  <summary>Server</summary>
+  <summary>Backend</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li>.NET Core Web API</li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.sqlite.org/">SqlLite</a></li>
   </ul>
 </details>
 
@@ -100,19 +63,19 @@ For more information on the importance of a professional README for your reposit
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
+- **[Clean Architecture]**
+- **[MediatR]**
+- **[Code First]**
+- **[FluentValidation]**
+- **[Automapper]**
+- **[Framework net9.0]**
+- 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://google.com)
 
@@ -122,25 +85,16 @@ For more information on the importance of a professional README for your reposit
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
+clonar el repositorio
+```sh
+  git clone https://github.com/NeckerFree/gestion-de-transferencias
+```
 
 ### Prerequisites
 
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+Se requiere VS 2022
 
 ### Setup
-
-Clone this repository to your desired folder:
 
 SQlite Database Setup:
 Step 1: create initial migration (Package Manager Console)
@@ -162,39 +116,34 @@ Build the api project
   dotnet build
   dotnet run 
 ```
-Open the URL https://localhost:7001/swagger/index.html to see endpoints
+Open the URL https://localhost:7001/swagger/index.html para ver la documentación y ejecutar las operaciones CRUD
 
-<!--
-Example command:
+### Usage 
 
-```sh
-  rails server
-```
---->
+1. Modelo de datos
+ 
+2. API Gestión de Transferencias
+
+3. POST Crear Billetera
+
+4. GET Obtener todas las Billeteras
+
+5. GET Obtener todos los movimientos
+
+6. POST Crear Transacción Validaciones
+
+7. POST Crear Transacción Resultado
+
+8. Persistencia en BD
+
+9. Obtener Billetera Validaciones
+
+10. Estructura Solución Gestión Transferencias
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 ### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,15 +155,8 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@NeckerFree](https://github.com/NeckerFree)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -264,15 +206,14 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+- **[1. ¿Cómo tu implementación puede ser escalable a miles de transacciones?]**
+- La implementación en Clean Architecture escala mediante CQRS para separar consultas de comandos, permitiendo distribuir cargas. Se integra Redis para cachear respuestas frecuentes y RabbitMQ/Kafka para procesar transacciones asíncronamente. Las bases de datos usan sharding (particionamiento por región/usuario) y réplicas de lectura para equilibrar la carga. Kubernetes maneja el escalado automático de pods en la nube, mientras que API Gateway (como YARP) distribuye tráfico entre microservicios.
+- **[2. ¿Cómo tu implementación asegura el principio de idempotencia?]**
+- Se garantiza generando tokens únicos (Idempotency-Key) en cada petición POST/PUT. El backend verifica en Redis si ya procesó esa clave antes de ejecutar la transacción. Para operaciones críticas, la base de datos usa constraints UNIQUE en campos como transaction_id. Si se detecta un request duplicado, se retorna la respuesta cacheada en lugar de reprocesar, asegurando consistencia.
+- **[3. ¿Cómo protegerías tus servicios para evitar ataques deDenegación de servicios, sql injection, CSRF?]**
+- Para DoS/DDoS se implementa rate limiting (límite de peticiones por IP) y Cloudflare. SQL Injection se mitiga con ORMs (EF Core/Dapper) que parametrizan queries. Los tokens CSRF y políticas CORS estrictas protegen endpoints web, mientras que el encoding de datos (HtmlEncoder) neutraliza XSS. Auditorías continuas con OWASP ZAP validan vulnerabilidades.
+- **[4. ¿Cuál sería tu estrategia para migrar un monolito amicroservicios?]**
+- Se aplica el Strangler Pattern: primero se extraen servicios acoplables (pagos, notificaciones) como módulos independientes con su propia DB (usando CDC para sincronizar datos iniciales). Un API Gateway enruta tráfico gradualmente del monolito a los nuevos servicios. Eventos asíncronos (Kafka) mantienen consistencia durante la transición, minimizando impacto en usuarios.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
