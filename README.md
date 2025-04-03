@@ -37,7 +37,7 @@
 
 
 **Gestion de Transferencias** es una API REST para gestionar transferencias de saldo. Se usan validaciones de datos para evitar errores.
-%% Diagrama de Clean Architecture
+
 graph TD
     subgraph "Clean Architecture"
         direction TB
