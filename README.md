@@ -248,7 +248,7 @@ If you like this project please give me a start
 - Los tokens CSRF y políticas CORS estrictas protegen endpoints web
 - El encoding de datos (HtmlEncoder) neutraliza XSS.
 - Auditorías continuas con OWASP ZAP validan vulnerabilidades.
-- **4. ¿Cuál sería tu estrategia para migrar un monolito amicroservicios?**
+- **4. ¿Cuál sería tu estrategia para migrar un monolito a microservicios?**
 - Extraer servicios acoplables (pagos, notificaciones) como módulos independientes con su propia DB 
 - Un API Gateway enruta tráfico gradualmente del monolito a los nuevos servicios.
 - Eventos asíncronos (RabbitMq) mantienen consistencia durante la transición, minimizando impacto en usuarios.
