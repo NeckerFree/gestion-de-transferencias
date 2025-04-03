@@ -20,3 +20,4 @@
 /GestionTransferencias.Persistence/Migrations/
 /.vs/GestionTransferenciasApis/v17/DocumentLayout.backup.json
 /.vs/GestionTransferenciasApis/v17/DocumentLayout.json
+*.dll

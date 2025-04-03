@@ -43,7 +43,7 @@ namespace GestionTransferencias.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<BilleteraDto>> PostBilletera(CreateBilleteraCommand command)
         {
-            var Billetera = await base.Mediator.Send(command); // Billetera is of type BilleteraDto
+            var Billetera = await base.Mediator.Send(command); 
             return CreatedAtAction(nameof(GetBilletera), new { id = Billetera.Id }, Billetera);
         }
         // PUT: api/Billeteras/5

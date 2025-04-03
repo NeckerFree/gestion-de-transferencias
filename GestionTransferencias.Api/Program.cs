@@ -9,6 +9,20 @@ using GestionTransferencias.Application.Mappings;
 using GestionTransferencias.Persistence;
 using GestionTransferencias.Persistence.Repositories;
 using MediatR;
+using System.Text.Json;
+
+// Temporary fix for testhost.deps.json
+if (!File.Exists("testhost.deps.json"))
+{
+    File.WriteAllText("testhost.deps.json",
+        JsonSerializer.Serialize(new
+        {
+            runtimeTarget = new { name = ".NETCoreApp,Version=v9.0" },
+            compilationOptions = new { },
+            targets = new { },
+            libraries = new { }
+        }));
+}
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
