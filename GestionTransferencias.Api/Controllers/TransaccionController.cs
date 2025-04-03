@@ -1,4 +1,5 @@
 ﻿
+using FluentValidation;
 using GestionTransferencias.Api.Controllers.GestionTransferencias.Api.Controllers;
 using GestionTransferencias.Application.Billeteras.Commands;
 using GestionTransferencias.Application.Billeteras.Queries;
@@ -12,43 +13,31 @@ using Microsoft.AspNetCore.Mvc;
 namespace GestionTransferencias.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class TransaccionesController(IMediator mediator, ILogger<TransaccionesController> logger) : BaseController(mediator)
+    public class TransaccionesController(IMediator mediator, ILogger<TransaccionesController> logger, IValidator<CreateTransaccionCommand> validator) : BaseController(mediator)
     {
         private readonly ILogger<TransaccionesController> _logger = logger;
-
-        //// GET: api/Transacciones
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<TransaccionDto>>> GetTransacciones(
-        //    CancellationToken cancellationToken, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
-        //{
-
-        //    _logger.LogInformation($"Fetching all Transacciones");
-        //    var query = new GetTransaccionesQuery { PageNumber = pageNumber, PageSize = pageSize };
-        //    return await HandleRequest(query, cancellationToken);
-        //}
-
-        // GET: api/Transacciones/5
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<TransaccionDto>> GetTransaccion(int id, CancellationToken cancellationToken)
-        //{
-        //    var query = new GetTransaccionByIdQuery { Id = id };
-        //    var Transaccion = await HandleRequest(query, cancellationToken);
-
-        //    if (Transaccion == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Transaccion;
-        //}
 
         // POST: api/Transacciones
 
         [HttpPost]
         public async Task<ActionResult<TransaccionDto>> PostTransaccion(CreateTransaccionCommand command, CancellationToken cancellationToken)
         {
-            //Validar que el monto command.Amount>0, en caso contrario lanzar excepción
-            if (command.Amount < 0) throw new NotPermitedTransactionException("El valor de la cantidad de la transacción debe ser mayor que cero");
+            // 1. Validación manual con FluentValidation
+            var validationResult = await validator.ValidateAsync(command, cancellationToken);
+
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(new
+                {
+                    Message = "Error de validación",
+                    Errors = validationResult.Errors.Select(e => new
+                    {
+                        Campo = e.PropertyName,
+                        Mensaje = e.ErrorMessage
+                    })
+                });
+            }
+
             //Obtener BilleteraOrigen con id command.WalletOrigenId, Si no existe lanzar excepción
 
             var queryOrigen = new GetBilleteraByIdQuery { Id = command.WalletOrigenId };

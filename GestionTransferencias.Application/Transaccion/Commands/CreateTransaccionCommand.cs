@@ -1,6 +1,5 @@
 ﻿using GestionTransferencias.Application.DTOs;
 using MediatR;
-using System;
 
 namespace GestionTransferencias.Application.Transaccion.Commands
 {
