@@ -7,10 +7,8 @@ using GestionTransferencias.Application.Billeteras.Validators;
 using GestionTransferencias.Application.Interfaces;
 using GestionTransferencias.Application.Mappings;
 using GestionTransferencias.Persistence;
-using GestionTransferencias.Persistence.Contexts;
 using GestionTransferencias.Persistence.Repositories;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSwaggerGen();
 
@@ -20,7 +18,9 @@ builder.Services.AddApplication();
 // Register Persistence Layer services
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddScoped<IBilleteraRepository, BilleteraRepository>();
+builder.Services.AddScoped<IHistorialMovimientoRepository, HistorialMovimientoRepository>();
 builder.Services.AddAutoMapper(typeof(BilleteraProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(HistorialMovimientoProfile).Assembly);
 builder.Services.AddValidatorsFromAssemblyContaining<GetBilleteraByIdQueryValidator>();
 // Or register all validators in the assembly:
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
