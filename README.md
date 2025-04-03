@@ -37,7 +37,49 @@
 
 
 **Gestion de Transferencias** es una API REST para gestionar transferencias de saldo. Se usan validaciones de datos para evitar errores.
+%% Diagrama de Clean Architecture
+graph TD
+    subgraph "Clean Architecture"
+        direction TB
+        
+        subgraph "Frameworks & Drivers"
+            DB[(Database)]
+            Web[API REST]
+            UI[Interfaz Web/Móvil]
+            External[APIs Externas]
+        end
 
+        subgraph "Interface Adapters"
+            Controllers[[Controllers]]
+            Repositories[[Repositories]]
+            Gateways[[External Gateways]]
+        end
+
+        subgraph "Application Layer"
+            UseCases[[Use Cases]]
+            Services[[Domain Services]]
+            DTOs[[Data Transfer Objects]]
+        end
+
+        subgraph "Domain Layer"
+            Entities[[Entities]]
+            ValueObjects[[Value Objects]]
+            DomainRules[[Reglas de Negocio]]
+        end
+
+        %% Conexiones
+        Web --> Controllers
+        UI --> Controllers
+        Controllers --> UseCases
+        UseCases --> Services
+        Services --> Entities
+        Entities --> DomainRules
+        UseCases --> Repositories
+        Repositories --> DB
+        UseCases --> Gateways
+        Gateways --> External
+    end
+Diagrama
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
